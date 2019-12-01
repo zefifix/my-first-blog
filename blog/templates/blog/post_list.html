@@ -3,6 +3,13 @@
         <title> Yulya's blog</title>
     </head>
     <body>
+    {% for post in posts %}
+        <div>
+            <p>published: {{post.published_date}}</p>
+            <h1><a href="">{{ post.title }}</a> </h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
     <h1><b>МЕДИЦИНА БУДУЩЕГО</b></h1>
     <p> ЕЩЕ НЕДАВНО ЛЮДИ ОБРАЩАЛИСЬ К МЕДИЦИНЕ ТОЛЬКО В СЛУЧАЕ БОЛЕЗНИ.
         С РОСТОМ БЛАГОСОСТОЯНИЯ И УВЕЛИЧЕНИЕМ СРОКА ЖИЗНИ В РАЗВИТЫХ СТРАНАХ
